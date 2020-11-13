@@ -1,0 +1,30 @@
+1. autó
+2. ipari robot
+3. hordó 
+4. szekrény
+5. polc
+6. cső
+7. futószalag
+8. repüló alkatrész, megfogó, meg alkatrészek, autó alkatrész
+9. szerszám: ásó, kapa, fűnyíró 
+10. 
+11. doboz
+12. ember
+13. asztal, szék, ajtó, ágy
+14. flakon/üveg
+15. konzerv
+16. fürdőszoba: wc, kád, zuhany
+17. Számítógép
+18. Csomagoló anyag
+19. Munkavédelmi ruha
+20. Hulladéktároló
+21. játékok: labda, plüss, kismozdony
+22. tükör, kép
+23. hangszer: gitár, zongora, dob, hegedű
+24. váza
+25. könyv
+26. lámpa
+27. toll, kés, kanál, villa, lábos, serpenyő
+28. 
+29.
+30.
