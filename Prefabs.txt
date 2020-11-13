@@ -1,13 +1,13 @@
-1. autó
-2. ipari robot
-3. hordó 
+1. autó								IIII			x
+2. ipari robot							II			x
+3. hordó 							I
 4. szekrény
 5. polc
 6. cső
 7. futószalag
 8. repüló alkatrész, megfogó, meg alkatrészek, autó alkatrész
 9. szerszám: ásó, kapa, fűnyíró 
-10. 
+10. toll, kés, kanál, villa, lábos, serpenyő
 11. doboz
 12. ember
 13. asztal, szék, ajtó, ágy
