@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2672860196457690922
+--- !u!1 &5811966301364490565
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4459627755046785855}
-  - component: {fileID: 6702982825770007547}
-  - component: {fileID: 7823393027746337387}
+  - component: {fileID: 5214165002083267920}
+  - component: {fileID: 2934781237973982612}
+  - component: {fileID: 1814368059300623364}
   m_Layer: 0
   m_Name: hammer2_lod3
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4459627755046785855
+--- !u!4 &5214165002083267920
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672860196457690922}
-  m_LocalRotation: {x: 0.00000022197246, y: 0.7071068, z: 0.70710677, w: -0.00000022197248}
-  m_LocalPosition: {x: -0.13545966, y: -1.3274266e-12, z: -0.65266013}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_GameObject: {fileID: 5811966301364490565}
+  m_LocalRotation: {x: 0.70710677, y: -0.00000022197248, z: -0.00000022197246, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0.02, z: 0}
+  m_LocalScale: {x: 45.987717, y: 45.987717, z: 45.987717}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3387020174129295283}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6702982825770007547
+--- !u!33 &2934781237973982612
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672860196457690922}
+  m_GameObject: {fileID: 5811966301364490565}
   m_Mesh: {fileID: 6322297452883472026, guid: 7bbd1fe00ba6dd345a36f4d1dd2d277d, type: 3}
---- !u!23 &7823393027746337387
+--- !u!23 &1814368059300623364
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672860196457690922}
+  m_GameObject: {fileID: 5811966301364490565}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,3 +79,34 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &7165423093520218479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3387020174129295283}
+  m_Layer: 0
+  m_Name: hammer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3387020174129295283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165423093520218479}
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.289}
+  m_LocalScale: {x: 2.1744938, y: 2.1744938, z: 2.1744938}
+  m_Children:
+  - {fileID: 5214165002083267920}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
