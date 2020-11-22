@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4127722668221838}
   - component: {fileID: 33071599809927802}
   - component: {fileID: 23398949866201934}
-  - component: {fileID: 7402293599057990462}
   m_Layer: 0
   m_Name: Barrel_02_snaps002
   m_TagString: Untagged
@@ -82,16 +81,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7402293599057990462
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477564253892410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8000002, y: 1.15625, z: 0.8000002}
-  m_Center: {x: 0, y: 0.578125, z: 0}
