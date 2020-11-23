@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] objects;
     public bool rotate_rand = false;
+    public bool General_spawner = false;
     public int rotation = 0;
     private GameObject spawnThis;
 
@@ -32,6 +33,9 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+         if (Input.GetKeyDown(KeyCode.Space) && General_spawner)
+         {
+                Spawn();
+         }
     }
 }
