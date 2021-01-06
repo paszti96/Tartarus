@@ -4253,6 +4253,7 @@ GameObject:
   - component: {fileID: 963194232}
   - component: {fileID: 963194233}
   - component: {fileID: 963194234}
+  - component: {fileID: 963194235}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4295,7 +4296,7 @@ Camera:
   far clip plane: 1000
   field of view: 63.57611
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4455,12 +4456,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9b3239f10f0d9946afd9c3a61a854af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aTexture: {fileID: 2800000, guid: 1b0dbc8d052d0ee45a5fa08650d0bf16, type: 3}
+--- !u!114 &963194235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467405dbcbd3d64ab4363e9ae8bb813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  period: 0.0166
+  startTime: 0
+  captureRgbImages: 1
+  m_Labelers:
+  - id: 0
+  - id: 1
+  showVisualizations: 1
+  references:
+    version: 1
+    00000000:
+      type: {class: BoundingBox2DLabeler, ns: UnityEngine.Perception.GroundTruth,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        annotationId: f9f22e05-443f-4602-a422-ebe4ea9b55cb
+        idLabelConfig: {fileID: 0}
+    00000001:
+      type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        annotationId: 1ccebeb4-5886-41ff-8fe0-f911fa8cbcdf
+        idLabelConfig: {fileID: 0}
 --- !u!1001 &967622493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5827,7 +5864,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447895889}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

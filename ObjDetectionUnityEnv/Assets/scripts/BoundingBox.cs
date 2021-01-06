@@ -5,7 +5,9 @@ using UnityEngine;
 public class BoundingBox : MonoBehaviour
 {  
     public Texture aTexture;
-
+    //public GameObject[] allObject;
+    List<GameObject> childObjects = new List<GameObject>();
+    
     // Start is called before the first frame update
     void OnGUI()
     {   
@@ -13,24 +15,31 @@ public class BoundingBox : MonoBehaviour
         foreach(GameObject go in allObject)
         {
            {
+               if(go){
                 Rect bb = BoundingBox2D(go);
                 GUI.DrawTexture(bb,aTexture, ScaleMode.ScaleToFit,true,10.0F, new Color(0,1,0,1), 1.0F,0);
                 // DrawRect(bb, new Color(0,1,0,1));
-            }
+                }
+           }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Transform[] allChildren = allObject.GetComponentsInChildren<Transform>();
+        // foreach (Transform child in allChildren)
+        // { 
+        //     childObjects.Add(child.gameObject);
+        // }
     }
 
     public static Rect BoundingBox2D (GameObject go)
-    {
-         
-        Vector3[] vertices = go.GetComponent<MeshFilter>().mesh.vertices;
-
+    {   
+        List<Vector3> vertices = new List<Vector3>(); 
+        // try{
+            go.GetComponent<MeshFilter>().mesh.GetVertices(vertices);
+        // }catch(MissingComponentException e){}
         float x1 = float.MaxValue, y1 = float.MaxValue, x2 = 0.0f, y2 = 0.0f;
 
         foreach (Vector3 vert in vertices)
