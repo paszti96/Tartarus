@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6362445899199826039}
   - component: {fileID: 5251671910309234541}
   - component: {fileID: 5251671910309234542}
+  - component: {fileID: -7580244528977832821}
   m_Layer: 0
   m_Name: ussr_lamp
   m_TagString: Untagged
@@ -111,3 +112,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 2518829273353873873, guid: 4be8dd9e2575e674ab62f547d9a0907b, type: 3}
+--- !u!114 &-7580244528977832821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969307631898360031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Lamp
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

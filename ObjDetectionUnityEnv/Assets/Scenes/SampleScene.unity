@@ -566,7 +566,7 @@ MonoBehaviour:
   - {fileID: 1477564253892410, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   - {fileID: 1214833425713930, guid: 90a18773e670f054680d2f39c76a5471, type: 3}
   - {fileID: 1299841317655722, guid: cfcae8fd1d4ebf64fbdfecf57e5160a7, type: 3}
-  rotate_rand: 0
+  rotate_rand: 1
   General_spawner: 1
   rotation: 0
 --- !u!4 &99462762
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200669215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -3060,7 +3060,7 @@ MonoBehaviour:
   - {fileID: 1477564253892410, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   - {fileID: 1214833425713930, guid: 90a18773e670f054680d2f39c76a5471, type: 3}
   - {fileID: 1299841317655722, guid: cfcae8fd1d4ebf64fbdfecf57e5160a7, type: 3}
-  rotate_rand: 0
+  rotate_rand: 1
   General_spawner: 1
   rotation: 0
 --- !u!1 &713958693
@@ -4295,13 +4295,13 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 63.57611
-  orthographic: 0
+  orthographic: 1
   orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 3
+  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -4333,7 +4333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c06c4139304315448a6d618c9014006, type: 3}
   m_Name: 
@@ -4364,7 +4364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 853ce71a0ec4d58478da49f134f49ab7, type: 3}
   m_Name: 
@@ -4378,7 +4378,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -4474,13 +4474,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4467405dbcbd3d64ab4363e9ae8bb813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: 
+  description: Tartarus Camera
   period: 0.0166
   startTime: 0
   captureRgbImages: 1
   m_Labelers:
   - id: 0
   - id: 1
+  - id: 2
+  - id: 3
   showVisualizations: 1
   references:
     version: 1
@@ -4490,14 +4492,31 @@ MonoBehaviour:
       data:
         enabled: 1
         annotationId: f9f22e05-443f-4602-a422-ebe4ea9b55cb
-        idLabelConfig: {fileID: 0}
+        idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
+          type: 2}
     00000001:
       type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth,
         asm: Unity.Perception.Runtime}
       data:
         enabled: 1
         annotationId: 1ccebeb4-5886-41ff-8fe0-f911fa8cbcdf
-        idLabelConfig: {fileID: 0}
+        idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
+          type: 2}
+    00000002:
+      type: {class: ObjectCountLabeler, ns: UnityEngine.Perception.GroundTruth, asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        objectCountMetricId: 51da3c27-369d-4929-aea6-d01614635ce2
+        m_LabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
+          type: 2}
+    00000003:
+      type: {class: RenderedObjectInfoLabeler, ns: UnityEngine.Perception.GroundTruth,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        objectInfoMetricId: 5ba92024-b3b7-41a7-9d3f-c03a6a8ddd01
+        idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
+          type: 2}
 --- !u!1001 &967622493
 PrefabInstance:
   m_ObjectHideFlags: 0

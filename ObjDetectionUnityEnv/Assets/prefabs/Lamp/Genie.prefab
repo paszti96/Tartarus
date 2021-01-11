@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6903864300192191474}
   - component: {fileID: 6360715987695929333}
+  - component: {fileID: -6531272256602245088}
   m_Layer: 0
   m_Name: Genie
   m_TagString: Untagged
@@ -143,6 +144,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6531272256602245088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090173655504161096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels: []
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
 --- !u!1 &6330665729513226068
 GameObject:
   m_ObjectHideFlags: 0
