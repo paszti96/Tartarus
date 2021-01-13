@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 726656349062882869}
   - component: {fileID: 726656349061555733}
   - component: {fileID: 726656349060588757}
+  - component: {fileID: -6227008693132410765}
   m_Layer: 0
-  m_Name: bed2 - Copy
+  m_Name: sofa2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,3 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-6227008693132410765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726656349062789653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - sofa
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

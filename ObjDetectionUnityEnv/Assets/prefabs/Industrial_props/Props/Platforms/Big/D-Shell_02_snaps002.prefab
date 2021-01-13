@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23588829190582794}
   - component: {fileID: 64238318346692916}
   - component: {fileID: -7404841244243278240}
+  - component: {fileID: -16221831062710349}
   m_Layer: 0
   m_Name: D-Shell_02_snaps002
   m_TagString: Untagged
@@ -111,3 +112,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-16221831062710349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124126670505542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - platforms
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

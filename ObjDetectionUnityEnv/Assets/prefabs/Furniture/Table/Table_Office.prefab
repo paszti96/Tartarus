@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8300916782752270118}
   - component: {fileID: 8026116283655245378}
   - component: {fileID: 3530427391517583338}
+  - component: {fileID: 126018397610053811}
   m_Layer: 0
   m_Name: Table_Office
   m_TagString: Untagged
@@ -79,3 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &126018397610053811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230029225941567394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - table
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

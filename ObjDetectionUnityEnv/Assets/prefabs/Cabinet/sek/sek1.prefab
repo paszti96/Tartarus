@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 4691935105734274140}
   - component: {fileID: 6764680015867753651}
   - component: {fileID: 2098419970788360491}
+  - component: {fileID: 1864733212891950774}
   m_Layer: 0
-  m_Name: sek1 (1)
+  m_Name: sek1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,3 +134,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1864733212891950774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753579780789041647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Cabinet
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

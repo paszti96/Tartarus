@@ -17,5 +17,49 @@ MonoBehaviour:
     id: 1
   - label: Genie Lamp
     id: 2
+  - label: black_barell
+    id: 3
+  - label: radioactive_barell
+    id: 4
+  - label: shell_barell
+    id: 5
+  - label: white_barell
+    id: 6
+  - label: woodenbarell
+    id: 7
+  - label: barell
+    id: 8
+  - label: drawer
+    id: 9
+  - label: Cabinet
+    id: 10
+  - label: police_car
+    id: 11
+  - label: car
+    id: 12
+  - label: bed
+    id: 13
+  - label: sofa
+    id: 14
+  - label: table
+    id: 15
+  - label: chair
+    id: 16
+  - label: table_chair
+    id: 17
+  - label: crate
+    id: 18
+  - label: generator
+    id: 19
+  - label: pipe
+    id: 20
+  - label: rack
+    id: 21
+  - label: platforms
+    id: 22
+  - label: tool
+    id: 23
+  - label: genie
+    id: 24
   autoAssignIds: 1
   startingLabelId: 1

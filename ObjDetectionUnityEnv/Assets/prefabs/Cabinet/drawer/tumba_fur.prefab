@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5919963249846952467}
   - component: {fileID: 7190404432296784446}
   - component: {fileID: 5491335213218008216}
+  - component: {fileID: 7006929320184586925}
   m_Layer: 0
-  m_Name: tumba_fur (1)
+  m_Name: tumba_fur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,3 +132,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 025f4e283fb576840aa96c4bcdb97ba0, type: 3}
+--- !u!114 &7006929320184586925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919963249854370259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - drawer
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
