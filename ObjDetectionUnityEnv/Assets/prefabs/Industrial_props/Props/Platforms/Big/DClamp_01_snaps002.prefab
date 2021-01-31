@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23539312910404446}
   - component: {fileID: 8706815772727936478}
   - component: {fileID: -2718153259210617898}
+  - component: {fileID: 7614624546788551784}
   m_Layer: 0
   m_Name: DClamp_01_snaps002
   m_TagString: Untagged
@@ -112,3 +113,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 613f15393910be744b375d31e217db3c, type: 2}
+--- !u!114 &7614624546788551784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545739332330330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Platforms
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 

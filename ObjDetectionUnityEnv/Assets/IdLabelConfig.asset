@@ -17,5 +17,39 @@ MonoBehaviour:
     id: 1
   - label: Genie Lamp
     id: 2
+  - label: Barell
+    id: 3
+  - label: Cabinet
+    id: 4
+  - label: Car
+    id: 5
+  - label: Bed
+    id: 6
+  - label: Sofa
+    id: 7
+  - label: Table
+    id: 8
+  - label: Chair
+    id: 9
+  - label: Crate
+    id: 10
+  - label: Generator
+    id: 11
+  - label: Pipe
+    id: 12
+  - label: Platforms
+    id: 13
+  - label: wrench
+    id: 14
+  - label: hammer
+    id: 15
+  - label: hatchet
+    id: 16
+  - label: piller
+    id: 17
+  - label: prybar
+    id: 18
+  - label: srewdriver
+    id: 19
   autoAssignIds: 1
   startingLabelId: 1

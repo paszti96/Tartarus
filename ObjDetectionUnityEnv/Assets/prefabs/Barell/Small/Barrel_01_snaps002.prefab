@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23393628664463432}
   - component: {fileID: -2963585683853902944}
   - component: {fileID: 1721049025296167613}
+  - component: {fileID: -5544101469148704587}
   m_Layer: 0
   m_Name: Barrel_01_snaps002
   m_TagString: Untagged
@@ -112,3 +113,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5544101469148704587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368847028122186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - Barell
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
