@@ -641,7 +641,7 @@ Transform:
   - {fileID: 406781786}
   - {fileID: 608058731}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &74896534
 GameObject:
@@ -1752,7 +1752,7 @@ Transform:
   - {fileID: 1672245759}
   - {fileID: 193859031}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183478763
 GameObject:
@@ -3374,63 +3374,6 @@ MonoBehaviour:
   rotate_rand: 0
   General_spawner: 1
   rotation: 0
---- !u!1001 &496858165
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1477564253892410, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_Name
-      value: Barrel_02_snaps002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.409565
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.842489
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4127722668221838, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
 --- !u!1 &554756536
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,6 +6241,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194230}
   - component: {fileID: 963194235}
+  - component: {fileID: 963194229}
   - component: {fileID: 963194236}
   - component: {fileID: 963194234}
   m_Layer: 0
@@ -6373,6 +6317,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -4.454, y: 21.847, z: 2.4450002}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba91370c668aa4864b18ecd8933c80b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imageFormat: 0
+  _screenCaptureInterval: 0.1
+  _format: 8
+  _camera: {fileID: 963194227}
 --- !u!143 &963194230
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6508,14 +6468,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Tartarus Camera
-  period: 0.166
+  period: 0.1
   startTime: 0
-  captureRgbImages: 1
+  captureRgbImages: 0
   m_Labelers:
   - id: 0
   - id: 1
   - id: 2
   - id: 3
+  - id: 4
   showVisualizations: 1
   references:
     version: 1
@@ -6531,7 +6492,7 @@ MonoBehaviour:
       type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth,
         asm: Unity.Perception.Runtime}
       data:
-        enabled: 0
+        enabled: 1
         annotationId: 1ccebeb4-5886-41ff-8fe0-f911fa8cbcdf
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
@@ -6548,6 +6509,14 @@ MonoBehaviour:
       data:
         enabled: 1
         objectInfoMetricId: 5ba92024-b3b7-41a7-9d3f-c03a6a8ddd01
+        idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
+          type: 2}
+    00000004:
+      type: {class: BoundingBox3DLabeler, ns: UnityEngine.Perception.GroundTruth,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        annotationId: 0bfbe00d-00fa-4555-88d1-471b58449f5c
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
 --- !u!114 &963194236
@@ -7399,7 +7368,7 @@ Transform:
   - {fileID: 799564298}
   - {fileID: 2101241892}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194130295
 GameObject:
@@ -9876,7 +9845,7 @@ Transform:
   - {fileID: 1353674437}
   - {fileID: 1784553947}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865997232
 GameObject:
@@ -10037,7 +10006,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1919911230
 PrefabInstance:

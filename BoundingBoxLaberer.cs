@@ -6,6 +6,7 @@ using Unity.Profiling;
 using UnityEngine.Serialization;
 using Unity.Simulation;
 using UnityEngine.UI;
+using Unity.Entities;
 
 namespace UnityEngine.Perception.GroundTruth
 {
@@ -15,11 +16,14 @@ namespace UnityEngine.Perception.GroundTruth
     [Serializable]
     public sealed class BoundingBox2DLabeler : CameraLabeler
     {
+        EntityQuery m_EntityQuery;
+        int m_CurrentFrame;
+
         ///<inheritdoc/>
         public override string description
         {
             get => "Produces 2D bounding box annotations for all visible objects that bear a label defined in this labeler's associated label configuration.";
-            protected set {}
+            protected set { }
         }
 
         [SuppressMessage("ReSharper", "InconsistentNaming")]
@@ -34,6 +38,7 @@ namespace UnityEngine.Perception.GroundTruth
             public float width;
             public float height;
             public List<uint> bb_intersections;
+            public Vector3 translation;
         }
 
         static ProfilerMarker s_BoundingBoxCallback = new ProfilerMarker("OnBoundingBoxesReceived");
@@ -51,6 +56,7 @@ namespace UnityEngine.Perception.GroundTruth
         Dictionary<int, AsyncAnnotation> m_AsyncAnnotations;
         AnnotationDefinition m_BoundingBoxAnnotationDefinition;
         List<BoundingBoxValue> m_BoundingBoxValues;
+        Dictionary<uint, Vector3> m_InstancePosition;
 
         Vector2 m_OriginalScreenSize = Vector2.zero;
 
@@ -85,6 +91,9 @@ namespace UnityEngine.Perception.GroundTruth
 
             m_AsyncAnnotations = new Dictionary<int, AsyncAnnotation>();
             m_BoundingBoxValues = new List<BoundingBoxValue>();
+            m_InstancePosition = new Dictionary<uint, Vector3>();
+
+            m_EntityQuery = World.DefaultGameObjectInjectionWorld.EntityManager.CreateEntityQuery(typeof(Labeling), typeof(GroundTruthInfo));
 
             m_BoundingBoxAnnotationDefinition = DatasetCapture.RegisterAnnotationDefinition("bounding box", idLabelConfig.GetAnnotationSpecification(),
                 "Bounding box for each labeled object visible to the sensor", id: new Guid(annotationId));
@@ -120,6 +129,8 @@ namespace UnityEngine.Perception.GroundTruth
                 return;
 
             m_AsyncAnnotations.Remove(frameCount);
+            m_InstancePosition.Clear();
+
             using (s_BoundingBoxCallback.Auto())
             {
                 m_BoundingBoxValues.Clear();
@@ -129,7 +140,29 @@ namespace UnityEngine.Perception.GroundTruth
                     if (!idLabelConfig.TryGetLabelEntryFromInstanceId(objectInfo.instanceId, out var labelEntry))
                         continue;
 
-                    m_BoundingBoxValues.Add(new BoundingBoxValue
+                    var entities = m_EntityQuery.ToEntityArray(Allocator.TempJob);
+                    var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+
+                    foreach (var entity in entities)
+                    {
+                        Labeling labeledEntity = entityManager.GetComponentObject<Labeling>(entity);
+                        if (!idLabelConfig.TryGetLabelEntryFromInstanceId(labeledEntity.instanceId, out var labelEntr))
+                            continue;
+                        var entityGameObject = labeledEntity.gameObject;
+
+                        var labelTransform = entityGameObject.transform.position;
+                        var cameraRelativeTransform = perceptionCamera.transform.InverseTransformPoint(labelTransform);
+
+                        // z front
+                        // y up
+                        // x right
+                        if (!m_InstancePosition.TryGetValue(labeledEntity.instanceId, out var vector))
+                            m_InstancePosition.Add(labeledEntity.instanceId, cameraRelativeTransform);
+                    }
+
+                    entities.Dispose();
+
+                    m_BoundingBoxValues.Add( new BoundingBoxValue
                     {
                         label_id = labelEntry.id,
                         label_name = labelEntry.label,
@@ -138,11 +171,13 @@ namespace UnityEngine.Perception.GroundTruth
                         y = objectInfo.boundingBox.y,
                         width = objectInfo.boundingBox.width,
                         height = objectInfo.boundingBox.height,
-                        bb_intersections = new List<uint>()
-                    }) ;
+                        bb_intersections = new List<uint>(),
+                        translation = m_InstancePosition[objectInfo.instanceId]
+                    });
                 }
 
-                foreach( var bb1 in m_BoundingBoxValues)
+
+                foreach (var bb1 in m_BoundingBoxValues)
                 {
                     foreach (var bb2 in m_BoundingBoxValues)
                     {
@@ -150,9 +185,9 @@ namespace UnityEngine.Perception.GroundTruth
                         {
                             var rect1 = new Rect(bb1.x, bb1.y, bb1.width, bb1.height);
                             var rect2 = new Rect(bb2.x, bb2.y, bb2.width, bb2.height);
-                            if (rect1.Overlaps(rect2)){
+                            if (rect1.Overlaps(rect2))
+                            {
                                 bb1.bb_intersections.Add(bb2.instance_id);
-                                bb2.bb_intersections.Add(bb1.instance_id);
                             }
                         }
                     }
