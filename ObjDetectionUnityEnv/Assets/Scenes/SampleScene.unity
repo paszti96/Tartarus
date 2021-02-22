@@ -6309,14 +6309,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.03410561, y: 0.19012529, z: 0.028290102, w: 0.9807593}
+  m_LocalRotation: {x: -0.02865521, y: -0.14112273, z: -0.04655339, w: 0.9884817}
   m_LocalPosition: {x: -6.51, y: 2.98, z: -20.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 921017191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -4.454, y: 21.847, z: 2.4450002}
+  m_LocalEulerAnglesHint: {x: -4.0020003, y: -16.081001, z: -4.827}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6330,7 +6330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _imageFormat: 0
-  _screenCaptureInterval: 0.1
+  _screenCaptureInterval: 1
   _format: 8
   _camera: {fileID: 963194227}
 --- !u!143 &963194230
@@ -6468,9 +6468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Tartarus Camera
-  period: 0.1
+  period: 1
   startTime: 0
-  captureRgbImages: 0
+  captureRgbImages: 1
   m_Labelers:
   - id: 0
   - id: 1
@@ -6492,14 +6492,14 @@ MonoBehaviour:
       type: {class: InstanceSegmentationLabeler, ns: UnityEngine.Perception.GroundTruth,
         asm: Unity.Perception.Runtime}
       data:
-        enabled: 1
+        enabled: 0
         annotationId: 1ccebeb4-5886-41ff-8fe0-f911fa8cbcdf
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
     00000002:
       type: {class: ObjectCountLabeler, ns: UnityEngine.Perception.GroundTruth, asm: Unity.Perception.Runtime}
       data:
-        enabled: 1
+        enabled: 0
         objectCountMetricId: 51da3c27-369d-4929-aea6-d01614635ce2
         m_LabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
@@ -6507,7 +6507,7 @@ MonoBehaviour:
       type: {class: RenderedObjectInfoLabeler, ns: UnityEngine.Perception.GroundTruth,
         asm: Unity.Perception.Runtime}
       data:
-        enabled: 1
+        enabled: 0
         objectInfoMetricId: 5ba92024-b3b7-41a7-9d3f-c03a6a8ddd01
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
@@ -6515,7 +6515,7 @@ MonoBehaviour:
       type: {class: BoundingBox3DLabeler, ns: UnityEngine.Perception.GroundTruth,
         asm: Unity.Perception.Runtime}
       data:
-        enabled: 1
+        enabled: 0
         annotationId: 0bfbe00d-00fa-4555-88d1-471b58449f5c
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
@@ -6538,9 +6538,9 @@ MonoBehaviour:
   targetDirection: {x: 0, y: 0}
   targetCharacterDirection: {x: 0, y: 0}
   characterBody: {fileID: 0}
-  acceleration: 1
-  maxSpeed: 1
-  dampingSpeed: 0.2
+  acceleration: 0.5
+  maxSpeed: 0.5
+  dampingSpeed: 0
   fwdKey: 119
   leftKey: 97
   backKey: 115
