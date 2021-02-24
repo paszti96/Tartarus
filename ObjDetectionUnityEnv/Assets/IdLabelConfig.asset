@@ -51,5 +51,15 @@ MonoBehaviour:
     id: 18
   - label: srewdriver
     id: 19
+  - label: Robot
+    id: 20
+  - label: Rack
+    id: 21
+  - label: Television
+    id: 22
+  - label: stair
+    id: 23
+  - label: elevator
+    id: 24
   autoAssignIds: 1
   startingLabelId: 1
