@@ -1,36 +1,60 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
+
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
-[ExecuteInEditMode]
-[RequireComponent(typeof(Camera))]
-public class NewBehaviourScript : MonoBehaviour
+namespace Unity.Simulation
 {
-    public Camera Cam;
-    public Material Mat;
-    // Start is called before the first frame update
-    void Start()
+    public class DepthGrab : MonoBehaviour
     {
-        
-    }
+        public CaptureImageEncoder.ImageFormat _imageFormat = CaptureImageEncoder.ImageFormat.Jpg;
+        public float _screenCaptureInterval = 1.0f;
+        public GraphicsFormat _format = GraphicsFormat.R8G8B8A8_UNorm;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Cam == null)
+        float _elapsedTime;
+        string _baseDirectory;
+        int _sequence = 0;
+        public Camera _camera;
+
+        void Start()
         {
-            Cam = this.GetComponent<Camera>();
-            Cam.depthTextureMode = DepthTextureMode.DepthNormals;
+            _baseDirectory = Manager.Instance.GetDirectoryFor(DataCapturePaths.ScreenCapture);
+            if (_camera != null && _camera.depthTextureMode == DepthTextureMode.None)
+                _camera.depthTextureMode = DepthTextureMode.DepthNormals;
         }
 
-        if(Mat == null)
+        void Update()
         {
-            Mat = new Material(Shader.Find("Hidden/FMShader_ScreenDeptNormal"));
-        }
-    }
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime > _screenCaptureInterval)
+            {
+                _elapsedTime -= _screenCaptureInterval;
 
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        Graphics.Blit(source, destination, Mat);
+                if (Application.isBatchMode && _camera.targetTexture == null)
+                {
+                    _camera.targetTexture = new RenderTexture(_camera.pixelWidth, _camera.pixelHeight, 0, _format);
+                }
+
+                CaptureCamera.CaptureDepthToFile
+                (
+                    _camera,
+                    _format,
+                    Path.Combine(_baseDirectory, _camera.name + "_depth_" + _sequence + "." + _imageFormat.ToString().ToLower()),
+                    _imageFormat
+                );
+
+                if (!_camera.enabled)
+                    _camera.Render();
+
+                ++_sequence;
+            }
+        }
+
+        void OnValidate()
+        {
+            // Automatically add the camera component if there is one on this game object.
+            if (_camera == null)
+                _camera = GetComponent<Camera>();
+        }
     }
 }
