@@ -162,7 +162,7 @@ namespace UnityEngine.Perception.GroundTruth
 
                     entities.Dispose();
 
-                    m_BoundingBoxValues.Add( new BoundingBoxValue
+                    m_BoundingBoxValues.Add(new BoundingBoxValue
                     {
                         label_id = labelEntry.id,
                         label_name = labelEntry.label,
@@ -185,7 +185,7 @@ namespace UnityEngine.Perception.GroundTruth
                         {
                             var rect1 = new Rect(bb1.x, bb1.y, bb1.width, bb1.height);
                             var rect2 = new Rect(bb2.x, bb2.y, bb2.width, bb2.height);
-                            if (rect1.Overlaps(rect2))
+                            if (rect1.Overlaps(rect2) && (bb1.translation.z > bb2.translation.z))
                             {
                                 bb1.bb_intersections.Add(bb2.instance_id);
                             }
