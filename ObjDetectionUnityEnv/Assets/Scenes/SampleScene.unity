@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 130.95094, g: 162.22865, b: 214.7182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6250,12 +6250,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba91370c668aa4864b18ecd8933c80b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imageFormat: 0
+  _nameGenerator: {fileID: 11400000, guid: 442a6ca1ff4f8f046ae66bc4341c72f2, type: 2}
+  _imageFormat: 2
   _screenCaptureInterval: 1
   _format: 8
   _camera: {fileID: 963194227}
@@ -6289,6 +6290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e73df253a0ad4a34a1667ce7ef35f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _nameGenerator: {fileID: 0}
   _cameraSources:
   - {fileID: 963194227}
   _imageFormat: 0
@@ -6414,9 +6416,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Tartarus Camera
-  period: 1
-  startTime: 0
   captureRgbImages: 1
+  firstCaptureFrame: 0
+  captureTriggerMode: 0
+  manualSensorAffectSimulationTiming: 0
+  simulationDeltaTime: 1
+  framesBetweenCaptures: 0
   m_Labelers:
   - id: 0
   - id: 1
@@ -6464,6 +6469,7 @@ MonoBehaviour:
         annotationId: 0bfbe00d-00fa-4555-88d1-471b58449f5c
         idLabelConfig: {fileID: 11400000, guid: 289052edb5d4cd34d9267103eabb1c8f,
           type: 2}
+        visualizationColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &963194236
 MonoBehaviour:
   m_ObjectHideFlags: 0
